@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golf Shot US | Fan Page</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Icons for Socials and Dark Mode -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">
+            <i class="fas fa-golf-ball"></i> Golf Shot <span>US</span>
+        </div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#top-posts">Top Shots</a>
+            <a href="#contact">Contact</a>
+            <!-- Dark Mode Toggle Button -->
+            <button id="theme-toggle" class="theme-btn" aria-label="Toggle Dark Mode">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>The Ultimate Golf Fan Community</h1>
+            <p>Your daily drive for the best golf highlights, course humor, and community moments.</p>
+            <div class="social-buttons">
+                <a href="https://www.facebook.com/golfshotus/" target="_blank" class="btn btn-fb"><i class="fab fa-facebook-f"></i> Follow on Facebook</a>
+                <a href="https://www.instagram.com/golf_shot_us" target="_blank" class="btn btn-ig"><i class="fab fa-instagram"></i> Follow on Instagram</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Top Posts Section -->
+    <section id="top-posts" class="featured-posts">
+        <div class="section-header">
+            <h2>🔥 Trending on the Feed</h2>
+            <p>Our most liked and shared posts from the community.</p>
+        </div>
+        
+        <div class="post-grid">
+            <!-- Facebook Post 1 -->
+            <div class="post-card">
+                <!-- TO ADD YOUR POST: Go to your FB post -> Click 3 dots -> Embed -> Copy iframe code and paste here -->
+                <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fgolfshotus%2Fposts%2F&show_text=true&width=350" width="350" height="450" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+            </div>
+
+            <!-- Facebook Post 2 -->
+            <div class="post-card">
+                <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fgolfshotus%2Fposts%2F&show_text=true&width=350" width="350" height="450" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+            </div>
+
+            <!-- Facebook Post 3 -->
+            <div class="post-card">
+                <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fgolfshotus%2Fposts%2F&show_text=true&width=350" width="350" height="450" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="section-header">
+            <h2>Get In Touch</h2>
+            <p>Have a crazy video submission? Want to collaborate? Reach out below!</p>
+            <!-- Replace with your actual email -->
+            <p class="email-display"><i class="fas fa-envelope"></i> Email us directly: <strong>golfshotus@gmail.com</strong></p>
+        </div>
+
+        <div class="contact-container">
+            <!-- We use Web3Forms for serverless contact forms (perfect for Vercel) -->
+            <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+                <!-- Get your free access key at web3forms.com and paste it below -->
+                <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
+                
+                <div class="input-group">
+                    <label for="name">Name / IG Handle</label>
+                    <input type="text" id="name" name="name" required placeholder="e.g., @tigerwoods">
+                </div>
+                
+                <div class="input-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required placeholder="your@email.com">
+                </div>
+                
+                <div class="input-group">
+                    <label for="message">Message / Video Link</label>
+                    <textarea id="message" name="message" rows="5" required placeholder="Tell us about the shot..."></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Golf Shot US. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
