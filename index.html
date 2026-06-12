@@ -1,101 +1,147 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Golf Shot US | Fan Page</title>
+    <title>Golf Shot US | Premium Experience</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Icons for Socials and Dark Mode -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <!-- Navigation -->
+    <!-- Premium Preloader -->
+    <div id="preloader">
+        <div class="loader-content">
+            <i class="fas fa-circle-notch fa-spin"></i>
+            <h2>Loading the Links...</h2>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+
+    <!-- Glassmorphic Navigation -->
     <nav>
         <div class="logo">
             <i class="fas fa-golf-ball"></i> Golf Shot <span>US</span>
         </div>
         <div class="nav-links">
             <a href="#home">Home</a>
-            <a href="#top-posts">Top Shots</a>
-            <a href="#contact">Contact</a>
-            <!-- Dark Mode Toggle Button -->
-            <button id="theme-toggle" class="theme-btn" aria-label="Toggle Dark Mode">
-                <i class="fas fa-moon"></i>
+            <a href="#feed">The Feed</a>
+            <button id="theme-toggle" class="icon-btn" aria-label="Toggle Dark Mode">
+                <i class="fas fa-sun"></i>
             </button>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>The Ultimate Golf Fan Community</h1>
-            <p>Your daily drive for the best golf highlights, course humor, and community moments.</p>
-            <div class="social-buttons">
-                <a href="https://www.facebook.com/golfshotus/" target="_blank" class="btn btn-fb"><i class="fab fa-facebook-f"></i> Follow on Facebook</a>
-                <a href="https://www.instagram.com/golf_shot_us" target="_blank" class="btn btn-ig"><i class="fab fa-instagram"></i> Follow on Instagram</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Top Posts Section -->
-    <section id="top-posts" class="featured-posts">
-        <div class="section-header">
-            <h2>🔥 Trending on the Feed</h2>
-            <p>Our most liked and shared posts from the community.</p>
-        </div>
+    <!-- Cinematic Hero with Video Background -->
+    <section id="home" class="hero-advanced">
+        <!-- Placeholder Video Background (Muted, Autoplay, Loop) -->
+        <video autoplay muted loop playsinline class="video-bg">
+            <source src="https://cdn.pixabay.com/video/2020/05/26/40192-424888066_large.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
         
-        <div class="post-grid">
-            <!-- Facebook Post 1 -->
-            <div class="post-card">
-                <!-- TO ADD YOUR POST: Go to your FB post -> Click 3 dots -> Embed -> Copy iframe code and paste here -->
-                <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fgolfshotus%2Fposts%2Fpfbid0dPUs4sjmtYhaL1NX5vuz14LYnKdzkUhuznbVjYEeP9e2pQZ7tVKqoue4MLah6XWDl&show_text=true&width=500" width="500" height="610" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>            
+        <div class="hero-content fade-up">
+            <span class="badge glass-badge">Welcome to the Club</span>
+            <h1 class="glitch-text" data-text="Perfect Your Swing.">Perfect Your <span class="highlight">Swing.</span></h1>
+            <p>The premier digital hub for US golfers. Viral highlights, pro gear reviews, and advanced swing mechanics.</p>
+            <div class="hero-buttons">
+                <a href="#feed" class="btn btn-primary">Explore Content</a>
             </div>
-            <!-- Facebook Post 2 -->
-            <div class="post-card">
-            <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fgolfshotus%2Fposts%2Fpfbid02qXLdmr75oLdpsUd1N52qVboWUbyGKVZjjEkR5C1XBBNwnxwecyM9M9AgMmoxsHc5l&show_text=true&width=500" width="500" height="616" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>            
-                <!-- Facebook Post 3 -->
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <div class="section-header">
-            <h2>Get In Touch</h2>
-            <p>Have a crazy video submission? Want to collaborate? Reach out below!</p>
-            <!-- Replace with your actual email -->
-            <p class="email-display"><i class="fas fa-envelope"></i> Email us directly: <strong>golfshotus@gmail.com</strong></p>
+    <!-- Dynamic Filterable Feed -->
+    <section id="feed" class="section">
+        <div class="section-header fade-up">
+            <h2>The Daily Feed</h2>
+            <p>Filter by what you want to see.</p>
         </div>
 
-        <div class="contact-container">
-            <!-- We use Web3Forms for serverless contact forms (perfect for Vercel) -->
-            <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
-                <!-- Get your free access key at web3forms.com and paste it below -->
-                <input type="hidden" name="access_key" value="bb6b356c-f011-44e4-96b9-6458d4d1eef9">
-                
-                <div class="input-group">
-                    <label for="name">Name / IG Handle</label>
-                    <input type="text" id="name" name="name" required placeholder="e.g., @tigerwoods">
+        <!-- Advanced Filter Buttons -->
+        <div class="filter-controls fade-up">
+            <button class="filter-btn active" data-filter="all">All Content</button>
+            <button class="filter-btn" data-filter="highlights">Highlights</button>
+            <button class="filter-btn" data-filter="gear">Gear Reviews</button>
+            <button class="filter-btn" data-filter="tips">Swing Tips</button>
+        </div>
+
+        <!-- Filterable Grid -->
+        <div class="advanced-grid">
+            
+            <!-- Item 1: Highlight -->
+            <div class="grid-item highlights fade-up">
+                <div class="card-image play-trigger" data-video="5H3k1xQwe8k">
+                    <img src="https://images.unsplash.com/photo-1593111774240-d529f12eb4d6?ixlib=rb-4.0.3" alt="Golf Swing">
+                    <div class="play-overlay"><i class="fas fa-play"></i></div>
                 </div>
-                
-                <div class="input-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" required placeholder="your@email.com">
+                <div class="card-content">
+                    <span class="tag tag-highlight">Highlight</span>
+                    <h3>Craziest Hole in One of the Year?</h3>
+                    <p>Watch this incredible shot from 180 yards out.</p>
                 </div>
-                
-                <div class="input-group">
-                    <label for="message">Message / Video Link</label>
-                    <textarea id="message" name="message" rows="5" required placeholder="Tell us about the shot..."></textarea>
+            </div>
+
+            <!-- Item 2: Gear -->
+            <div class="grid-item gear fade-up">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1535136104956-6dd67be513e5?ixlib=rb-4.0.3" alt="Golf Clubs">
                 </div>
-                
-                <button type="submit" class="btn btn-submit">Send Message</button>
-            </form>
+                <div class="card-content">
+                    <span class="tag tag-gear">Gear</span>
+                    <h3>Top 5 Drivers for Forgiveness</h3>
+                    <p>Stop slicing into the woods. We tested the best game-improvement drivers.</p>
+                    <a href="#" class="read-more">Read Full Review →</a>
+                </div>
+            </div>
+
+            <!-- Item 3: Tips -->
+            <div class="grid-item tips fade-up">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1622279457486-62dcc4a431d6?ixlib=rb-4.0.3" alt="Golf Balls">
+                </div>
+                <div class="card-content">
+                    <span class="tag tag-tips">Pro Tip</span>
+                    <h3>Master the Flop Shot</h3>
+                    <p>Phil Mickelson's secret to getting over bunkers with zero green to work with.</p>
+                    <a href="#" class="read-more">Learn the Drill →</a>
+                </div>
+            </div>
+
+            <!-- Item 4: Highlight -->
+            <div class="grid-item highlights fade-up">
+                <div class="card-image play-trigger" data-video="tQjJ9Wl6tUU">
+                    <img src="https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?ixlib=rb-4.0.3" alt="Golf Course">
+                    <div class="play-overlay"><i class="fas fa-play"></i></div>
+                </div>
+                <div class="card-content">
+                    <span class="tag tag-highlight">Highlight</span>
+                    <h3>Tiger's Greatest Putts</h3>
+                    <p>A compilation of the most clutch putts in Masters history.</p>
+                </div>
+            </div>
+
         </div>
     </section>
+
+    <!-- Cinematic Video Modal (Hidden by default) -->
+    <div id="video-modal" class="modal">
+        <div class="modal-content">
+            <button class="close-modal"><i class="fas fa-times"></i></button>
+            <div class="iframe-container">
+                <iframe id="modal-iframe" src="" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Golf Shot US. All rights reserved.</p>
+        <div class="brand">
+            <h2>Golf Shot <span>US</span></h2>
+            <p>Elevating the game.</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
